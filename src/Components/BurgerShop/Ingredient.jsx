@@ -1,9 +1,9 @@
 import React from "react"
 
-const Ingredient = () => {
+const Ingredient = (props) => {
 	return (
 		<li>
-			Name of ingredient here
+		{props.ingredient.name}
 			<button>+</button>
 			<button>X</button>
 		</li>
