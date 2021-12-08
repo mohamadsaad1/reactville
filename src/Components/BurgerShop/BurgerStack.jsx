@@ -8,7 +8,6 @@ const BurgerStack = (props) => {
         props.stack.map((ingredient, idx) => (
           <Ingredient
             key={idx}
-            idx={idx}
             ingredient={ingredient}
           />
         ))
