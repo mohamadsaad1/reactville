@@ -4,7 +4,7 @@ import Ingredient from "./Ingredient"
 const IngredientList = (props) => {
 	return (
 		<ul>
-		{props.stack.map((ingredient, idx) => (
+		{props.ingredients.map((ingredient, idx) => (
           <Ingredient
             key={idx}
             idx={idx}

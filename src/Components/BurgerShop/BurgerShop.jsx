@@ -19,12 +19,10 @@ const [stack] = useState([])
       </nav>
       <section>
         <IngredientList
-          stack={stack}
-
-
+        ingredients={ingredients}
         />
         <BurgerStack
-          ingredients={ingredients}
+          stack={stack}
 
         />
       </section>

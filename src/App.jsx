@@ -10,10 +10,12 @@ import Nav from './Components/Nav/Nav'
 const App = () => {
   return (
     <>
-    <Nav />
     <main>
-        <Landing />
-        <BurgerShop />
+    <Nav />
+    <Routes>
+        <Route path="/" element={<Landing/>}/>
+        <Route path="/burgers" element={<BurgerShop />}/>
+    </Routes>
     </main>
     </>
   )}
