@@ -1,9 +1,22 @@
 import React from "react"
+import Ingredient from "./Ingredient"
 
-const BurgerStack = () => {
+const BurgerStack = (props) => {
   return (
     <ul className="burger-stack">
-      Use the map function and the Ingredient component here
+      {props.ingredients.length ?
+        props.ingredients.map((ingredient, idx) => (
+          <Ingredient
+            key={idx}
+            idx={idx}
+            ingredient={ingredient}
+          />
+        ))
+        :
+        <div>
+          No Ingredients
+        </div>
+      }
     </ul>
   )
 }
