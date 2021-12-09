@@ -7,7 +7,7 @@ import Logo from '../../assets/react-logo.png'
 const Nav = () => {
   return (
     <nav className="navigation-bar">
-      <NavLink to="/"><img src="logo192.png" alt="Reactville" /></NavLink>
+      <NavLink id="logo" to="/"><img src="logo192.png" alt="Reactville" /></NavLink>
       <NavLink to="/burgers">BURGER SHOP</NavLink> 
             
 
