@@ -8,19 +8,20 @@ import Nav from './Components/Nav/Nav'
 import SuperMarket from'./Components/SuperMarket/SuperMarket'
 
 
-const [cash, setCash] = useState(100)
 
 
 
-const handleExchange = (amt) => {
-  // setCash() will be useful here
-}
 
 const App = () => {
+  const [cash, setCash] = useState(100)
+
+  const handleExchange = (amt) => {
+    // setCash() will be useful here
+  }
   return (
     <>
     <main>
-    <Nav />
+    <Nav cash={cash} setCash={setCash}/>
     <Routes>
         <Route path="/" element={<Landing/>}/>
         <Route path="/burgers" element={<BurgerShop/>}/>
