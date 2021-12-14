@@ -15,8 +15,9 @@ import SuperMarket from'./Components/SuperMarket/SuperMarket'
 const App = () => {
   const [cash, setCash] = useState(100)
 
-  const handleExchange = (amt) => {
-    // setCash() will be useful here
+  const handleExchange = (ele) => {
+    if (cash - ele > 0) setCash((cash - ele).toFixed(2))
+    return true
   }
   return (
     <>
@@ -25,8 +26,10 @@ const App = () => {
     <Routes>
         <Route path="/" element={<Landing/>}/>
         <Route path="/burgers" element={<BurgerShop/>}/>
-        <Route path="/market" element={<SuperMarket/>}/>
-    </Routes>
+        <Route path="/market" element={<SuperMarket handleExchange={handleExchange}
+        />}    
+        />
+      </Routes>
     </main>
     </>
   )}

@@ -7,11 +7,15 @@ import Cart from './Cart'
 import MarketNav from './MarketNav'
 import DisplayProducts from './DisplayProducts'
 import { products } from '../../data/market-data'
-const SuperMarket = () => {
+
+
+const SuperMarket = (props) => {
 
   const [cart, setCart] = useState([])
 
   const [productCategory, setProductCategory] = useState('Produce')
+
+  const [toggleCart, setToggleCart] = useState(true)
 
   console.log(products)
 
@@ -45,6 +49,8 @@ const addToCart = (item) => {
         <MarketNav
           products={products}
           setProductCategory={setProductCategory}
+          toggleCart={toggleCart}
+          setToggleCart={setToggleCart}
         />
 
         <DisplayProducts
@@ -59,6 +65,7 @@ const addToCart = (item) => {
         setCart={setCart}
         cart={cart}
         removeFromCart={removeFromCart}
+        handleExchange={props.handleExchange}
         />
     </div>
   )
